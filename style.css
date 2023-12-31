@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: floralwhite;
+}
+
+.container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Apply border-box to container */
+}
+
+    /* Apply a consistent base style to all input elements including textarea */
+    .container input, .container textarea {
+        width: 100%; /* Full width */
+        padding: 10px; /* Padding inside the box */
+        margin-bottom: 10px; /* Spacing below the box */
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box; /* Include padding and border in the element's total width */
+        font-family: Arial, sans-serif; /* Ensure font consistency */
+    }
+
+.button-container {
+    display: flex;
+    justify-content: space-around; /* or 'space-between' based on your preference */
+    gap: 10px; /* This sets a gap between your buttons */
+    flex-wrap: wrap; /* Wrap buttons to next line if not enough space */
+}
+
+.container button {
+    flex: 1; /* Allows button to grow and occupy the available space */
+    padding: 10px;
+    margin-bottom: 10px; /* Spacing below the buttons */
+    border: none;
+    color: white;
+    background-color: #4CAF50;
+    cursor: pointer;
+    border-radius: 3px;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+    .container button:hover {
+        background-color: #45a049;
+    }
+
+    .container button:active {
+        background-color: #367c39; /* Darker shade for when the button is pressed */
+    }
+
+.output-box {
+    display: block;
+    background-color: #e7e7e7;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    text-align: left; /* Align text to left like a textarea */
+    min-height: 50px;
+    padding: 10px; /* Same padding as textarea for consistency */
+    word-wrap: break-word;
+    font-family: Arial, sans-serif; /* Ensure font consistency */
+    margin-bottom: 20px; /* Spacing below the output box */
+}
+
+textarea {
+    min-height: 100px; /* Minimum height to show multiple lines */
+    resize: vertical; /* Allow only vertical resizing */
+    overflow-y: auto; /* Add scroll inside textarea if text is too long */
+}
