@@ -4,7 +4,7 @@ function reverseWords() {
     // Remove leading spaces
     let start = input.search(/\S/);
     if (start === -1) {
-        document.getElementById("result").innerText = "";
+        document.getElementById("outputText").innerText = "";
         return;
     }
     input = input.slice(start);
@@ -36,11 +36,43 @@ function reverseWords() {
         reversed += reversed.length > 0 ? " " + wordsStack.pop() : wordsStack.pop();
     }
 
-    let resultBox = document.getElementById("result");
-    resultBox.innerText = reversed;
+    // Update only the text in the dedicated span
+    let outputText = document.getElementById("outputText");
+    outputText.innerText = reversed;
 }
 
+function reverseLetters() {
+    let input = document.getElementById("inputText").value;
 
+    // Remove leading and trailing spaces and reduce multiple spaces to a single space
+    input = input.trim().replace(/\s+/g, ' ');
+
+    // Split the input into words
+    let words = input.split(' ');
+
+    // Reverse each word and join them back into a string
+    let reversed = words.map(word => word.split('').reverse().join('')).join(' ');
+
+    // Update only the text in the dedicated span
+    let outputText = document.getElementById("outputText");
+    outputText.innerText = reversed;
+}
+
+///////////////////////////
+// Utility Functions
+/////////////////
+
+function copyText() {
+    // Get the text from the span within the output box
+    let text = document.getElementById("outputText").innerText;
+    // Use the navigator clipboard API to copy text
+    navigator.clipboard.writeText(text).then(() => {
+        
+        console.log("Text copied to clipboard");
+    }).catch(err => {
+        console.error('Could not copy text: ', err);
+    });
+}
 
 /* Alternative Solutions */
 /*
