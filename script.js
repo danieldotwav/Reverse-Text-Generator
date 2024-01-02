@@ -58,6 +58,19 @@ function reverseLetters() {
     outputText.innerText = reversed;
 }
 
+function palindromizeWords() {
+    let input = document.getElementById("inputText").value;
+
+    // Split the input into words
+    let words = input.split(/\s+/);
+
+    // Transform each word into a palindrome
+    let palindromized = words.map(word => word + word.slice(0, -1).split('').reverse().join('')).join(' ');
+
+    let outputText = document.getElementById("outputText");
+    outputText.innerText = palindromized;
+}
+
 ///////////////////////////
 // Utility Functions
 /////////////////
