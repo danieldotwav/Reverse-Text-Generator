@@ -1,8 +1,14 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Shrikhand;
     text-align: center;
     padding: 20px;
-    background-color: floralwhite;
+    background: linear-gradient(to right, #56CCF2, #BB6BD9); /* Gradient from light blue to vibrant pink */
+}
+
+textarea {
+    min-height: 100px; /* Minimum height to show multiple lines */
+    resize: vertical; /* Allow only vertical resizing */
+    overflow-y: auto; /* Add scroll inside textarea if text is too long */
 }
 
 .container {
@@ -12,7 +18,10 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 18px;
+    color: #5D4A95;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125);
+    background: ghostwhite;
 }
 
     /* Apply a consistent base style to all input elements including textarea */
@@ -26,36 +35,31 @@ body {
         font-family: Arial, sans-serif; /* Ensure font consistency */
     }
 
-.button-container {
-    display: flex;
-    justify-content: space-around; /* or 'space-between' based on your preference */
-    gap: 10px; /* This sets a gap between your buttons */
-    flex-wrap: wrap; /* Wrap buttons to next line if not enough space */
-}
-
 .container button {
     flex: 1; /* Allows button to grow and occupy the available space */
     padding: 10px;
     margin-bottom: 10px; /* Spacing below the buttons */
     border: none;
     color: white;
-    background-color: firebrick;
+    background-color: #E06666; /* Light red */
     cursor: pointer;
     border-radius: 3px;
     box-sizing: border-box; /* Include padding and border in the element's total width */
 }
 
     .container button:hover {
-        background-color: #9C1A1A;
+        background-color: #CC0000; /* Darker red */
     }
 
     .container button:active {
-        background-color: #8F1818; /* Darker shade for when the button is pressed */
+        background-color: #990000; /* Even darker red */
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); /* Inner shadow to give depth */
+        transform: translateY(1px); /* Slightly move the button down */
     }
 
 .output-box {
-    position: relative;
-    display: block;
+    /*position: relative;*/
+    display: flex;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -96,8 +100,4 @@ body {
     font-size: 14px; /* Same as the placeholder font size */
 }
 
-textarea {
-    min-height: 100px; /* Minimum height to show multiple lines */
-    resize: vertical; /* Allow only vertical resizing */
-    overflow-y: auto; /* Add scroll inside textarea if text is too long */
-}
+
