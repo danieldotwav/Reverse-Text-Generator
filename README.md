@@ -2,6 +2,12 @@
 
 A simple web tool that reverses the order of words or letters in a string of text.
 
+![image](https://github.com/danieldotwav/Reverse-Text-Generator/assets/31682816/8a0ed206-6c66-4bee-8fd1-d919d54d0b50)
+
+## Link
+
+[Web Application](https://danieldotwav.github.io/Reverse-Text-Generator/)
+
 ## Features
 
 - **Reverse Words**: Reorder the words in a string in reverse. For example, "hello world" becomes "world hello".
