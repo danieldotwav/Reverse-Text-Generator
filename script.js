@@ -36,9 +36,7 @@ function reverseWords() {
         reversed += reversed.length > 0 ? " " + wordsStack.pop() : wordsStack.pop();
     }
 
-    // Update only the text in the dedicated span
-    let outputText = document.getElementById("outputText");
-    outputText.innerText = reversed;
+    updateOutputText(reversed);
 }
 
 function reverseLetters() {
@@ -53,9 +51,7 @@ function reverseLetters() {
     // Reverse each word and join them back into a string
     let reversed = words.map(word => word.split('').reverse().join('')).join(' ');
 
-    // Update only the text in the dedicated span
-    let outputText = document.getElementById("outputText");
-    outputText.innerText = reversed;
+    updateOutputText(reversed);
 }
 
 function palindromizeWords() {
@@ -67,8 +63,7 @@ function palindromizeWords() {
     // Transform each word into a palindrome
     let palindromized = words.map(word => word + word.slice(0, -1).split('').reverse().join('')).join(' ');
 
-    let outputText = document.getElementById("outputText");
-    outputText.innerText = palindromized;
+    updateOutputText(palindromized);
 }
 
 ///////////////////////////
@@ -87,13 +82,11 @@ function copyText() {
     });
 }
 
-/* Alternative Solutions */
-/*
-function reverseWords() {
-    let input = document.getElementById("inputText").value;
-    let words = input.split(/\s+/);
-    let reversedWords = words.reverse().join(' ');
-    let resultBox = document.getElementById("result");
-    resultBox.innerText = reversedWords;
+document.getElementById('nightShift').addEventListener('change', function () {
+    document.body.classList.toggle('night-mode');
+});
+
+function updateOutputText(newText) {
+    var outputTextElement = document.getElementById('outputText');
+    outputTextElement.textContent = newText;
 }
-*/
